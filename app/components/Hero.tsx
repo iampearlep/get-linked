@@ -1,12 +1,13 @@
 import CountdownTimer from "./CountdownTimer";
 import Image from "next/image";
-import HeroImg from "../public/images/Image 1.svg";
-import Vector from "../public/images/Vector 4.svg";
-import ManImg from "../public/images/man.svg";
-import PurpleLens from "../public/images/Purple-Lens.svg";
-import Title from "../public/images/Title.svg";
-import Star from "../public/images/star.svg";
-import Title2 from "../public/images/Title2.svg"
+import HeroImg from "../../public/images/Image 1.svg";
+import Vector from "../../public/images/Vector 4.svg";
+import ManImg from "../../public/images/man.svg";
+import PurpleLens from "../../public/images/Purple-Lens.svg";
+import Title from "../../public/images/Title.svg";
+import Star from "../../public/images/star.svg";
+import Title2 from "../../public/images/Title2.svg"
+
 const targetDate = new Date("2023-12-31 23:59:59");
 const Hero: React.FC = () => {
   return (

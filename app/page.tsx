@@ -1,7 +1,8 @@
-import Hero from "./Hero"
-import Intro from "./Intro"
-import Rules from "./Rules"
-import Attributes from "./Attributes"
+import Hero from "./components/Hero"
+import Intro from "./components/Intro"
+import Rules from "./components/Rules"
+import Attributes from "./components/Attributes"
+import AccordionBox from "./components/AccordionBox"
 export default function Home() {
   return (
     <main>
@@ -9,6 +10,7 @@ export default function Home() {
       <Intro />
       <Rules />
       <Attributes />
+      <AccordionBox />
     </main>
   )
 }

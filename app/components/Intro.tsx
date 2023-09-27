@@ -1,8 +1,8 @@
 import Image from "next/image";
-import IdeaImg from "../public/images/The big idea.svg";
-import Star from "../public/images/star pu.svg";
-import Arrow from "../public/images/arrow.svg";
-import Sata from "../public/images/sata gra.svg";
+import IdeaImg from "../../public/images/The big idea.svg";
+import Star from "../../public/images/star pu.svg";
+import Arrow from "../../public/images/arrow.svg";
+import Sata from "../../public/images/sata gra.svg";
 const Intro = () => {
   return (
     <div className="bg-[#150E28] text-white border-b border-[#3d364d]">

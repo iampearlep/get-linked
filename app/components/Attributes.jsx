@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Ellipse from "../public/images/Ellipse 1.svg";
-import Judges from "../public/images/judges.svg";
-import Star from "../public/images/star pu.svg";
-import Star1 from "../public/images/star.svg";
+import Ellipse from "../../public/images/Ellipse 1.svg";
+import Judges from "../../public/images/judges.svg";
+import Star from "../../public/images/star pu.svg";
+import Star1 from "../../public/images/star.svg";
 
 const Attributes = () => {
   return (

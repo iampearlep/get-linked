@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Star1 from "../public/images/star1.svg";
-import Star from "../public/images/star.svg";
-import Ellipse from "../public/images/Ellipse 1.svg";
-import Lady from "../public/images/lady.svg";
-import PurpleLens from "../public/images/Purple-Lens.svg";
+import Star1 from "../../public/images/star1.svg";
+import Star from "../../public/images/star.svg";
+import Ellipse from "../../public/images/Ellipse 1.svg";
+import Lady from "../../public/images/lady.svg";
+import PurpleLens from "../../public/images/Purple-Lens.svg";
 
 const Rules = () => {
   return (

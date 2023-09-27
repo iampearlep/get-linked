@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { BsTextParagraph, BsXLg } from "react-icons/bs";
 import Image from "next/image";
-import getLinked from "../public/images/getlinked.svg";
+import getLinked from "../../public/images/getlinked.svg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMobileNav = () => {
