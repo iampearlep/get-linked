@@ -24,7 +24,7 @@ const Rules = () => {
             Rules and <br />
             <span className="text-[#d434fe]">Guidelines</span>
           </h2>
-          <p className="z-10 text-md md:text-lg text-center md:text-left">
+          <p className="z-10 text-md md:text-md text-center md:text-left">
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as day: to shape the future. Whether you're a coding
             genius, a design maverick, or a concept wizard, you'll have the
