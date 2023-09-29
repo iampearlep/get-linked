@@ -3,6 +3,7 @@ import Intro from "./components/Intro"
 import Rules from "./components/Rules"
 import Attributes from "./components/Attributes"
 import Faq from "./components/Faq"
+import Timeline from "./components/Timeline"
 export default function Home() {
   return (
     <main>
@@ -11,6 +12,7 @@ export default function Home() {
       <Rules />
       <Attributes />
       <Faq/>
+      <Timeline />
     </main>
   )
 }
