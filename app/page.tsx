@@ -4,6 +4,7 @@ import Rules from "./components/Rules"
 import Attributes from "./components/Attributes"
 import Faq from "./components/Faq"
 import Timeline from "./components/Timeline"
+import Prices from "./components/Prices"
 export default function Home() {
   return (
     <main>
@@ -13,6 +14,7 @@ export default function Home() {
       <Attributes />
       <Faq/>
       <Timeline />
+      <Prices />
     </main>
   )
 }
