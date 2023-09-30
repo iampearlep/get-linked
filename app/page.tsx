@@ -5,6 +5,7 @@ import Attributes from "./components/Attributes"
 import Faq from "./components/Faq"
 import Timeline from "./components/Timeline"
 import Prices from "./components/Prices"
+import Patners from "./components/Patners"
 export default function Home() {
   return (
     <main>
@@ -14,7 +15,8 @@ export default function Home() {
       <Attributes />
       <Faq/>
       <Timeline />
-      <Prices />
+      <Prices /> 
+      <Patners />
     </main>
   )
 }
