@@ -17,7 +17,7 @@ const Prices = () => {
             Highlight of the prizes or rewards for winners and for participants.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-x-8 py-10">
+        <div className="flex flex-col md:flex-row gap-y-10 gap-x-8 py-10">
           <div className="">
           <Image src={Star} width={30} height={36} alt="" className="w-4 md:-mt-20 ml-32 absolute" />
           <Image

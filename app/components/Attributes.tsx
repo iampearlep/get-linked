@@ -7,7 +7,7 @@ import Star1 from "../../public/images/star.svg";
 const Attributes = () => {
   return (
     <div className="bg-[#150E28] text-white border-b border-[#3d364d]">
-      <div className="w-full px-5 py-10 md:w-10/12 md:py-16 flex flex-col md:flex-row gap-x-14 gap-y-5 mx-auto items-center">
+      <div className="w-full px-5 py-14 md:w-10/12 md:py-16 flex flex-col md:flex-row gap-x-14 gap-y-5 mx-auto items-center">
         <div className="md:w-1/2 flex flex-col justify-center items-center">
         <Image src={Star} width={30} height={36} alt="" className="w-4 md:w-8 mr-auto ml-16 relative -mt-10" />
           <div className="py-5">

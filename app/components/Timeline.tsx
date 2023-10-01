@@ -169,7 +169,7 @@ const Timeline = () => {
                 <h2 className="text-[#d434fe] font-semibold text-lg">
                   Hackathon Announcement
                 </h2>
-                <p className="text-sm">
+                <p className="text-sm py-2">
                   The getlinked tech hackathon 1.0 is formally announced to the
                   general public
                 </p>
@@ -191,7 +191,7 @@ const Timeline = () => {
                 <h2 className="text-[#d434fe] font-semibold text-lg">
                   Teams Registration begins
                 </h2>
-                <p className="text-sm">
+                <p className="text-sm py-2">
                   Interested teams can now show their interest in the getlinked
                   tech hackathon 1.0 2023 by proceeding to register
                 </p>
@@ -213,7 +213,7 @@ const Timeline = () => {
                 <h2 className="text-[#d434fe] font-semibold text-lg">
                   Teams Registration ends
                 </h2>
-                <p className="text-sm">
+                <p className="text-sm py-2">
                   Interested Participants are no longer Allowed to register
                 </p>
                 <div className="text-[#d434fe] font-semibold">
@@ -234,7 +234,7 @@ const Timeline = () => {
                 <h2 className="text-[#d434fe] font-semibold text-lg">
                   Announcement of the accepted teams and ideas
                 </h2>
-                <p className="text-sm">
+                <p className="text-sm py-2">
                   All teams whom idea has been accepted into getlinked tech
                   hackathon 1.0 2023 are formally announced
                 </p>
@@ -256,7 +256,7 @@ const Timeline = () => {
                 <h2 className="text-[#d434fe] font-semibold text-lg">
                   Getlinked Hackathon 1.0 Offically Begins
                 </h2>
-                <p className="text-sm">
+                <p className="text-sm py-2">
                   Accepted teams can now proceed to build their ground breaking
                   skill driven solutions
                 </p>
@@ -278,7 +278,7 @@ const Timeline = () => {
                 <h2 className="text-[#d434fe] font-semibold text-lg">
                   Demo Day
                 </h2>
-                <p className="text-sm">
+                <p className="text-sm py-2">
                   Teams get the opportunity to pitch their projects to judges.
                   The winner of the hackathon will also be announced on this day
                 </p>
@@ -290,69 +290,6 @@ const Timeline = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="mx-auto relative w-full max-w-[850%] py-1 px-5 before:content-['Start'] before:-translate-x-1/2 before:top-0 before:absolute before:h-[40px] before:z-10 before:text-center before:w-[150px] before:left-1/2 after:absolute after:left-1/2 after:h-[40px] after:z-10 after:text-center after:w-[150px] after:-translate-x-1/2 after:content-['End'] after:bottom-0">
-        
-      <div className="my-[65px] before:content-[''] before:-translate-y-1/2 before:-translate-x-1/2 before:absolute before:top-1/2 before:left-1/2 w-1 h-full border-dotted border-2 border-white">
-        <div>
-          <div>
-            <h2>Hackathon Announcement</h2>
-            <p>November 18, 2023</p>
-          </div>
-          <p>
-            The getlinked tech hackathon 1.0 is formally announced to the
-            general public and teams begin to get ready to register
-          </p>
-        </div>
-        <div>
-          <div>
-            <h2>Teams Registration begins</h2>
-            <p>November 18, 2023</p>
-          </div>
-          <p>
-            Interested teams can now show their interest in the getlinked tech
-            hackathon 1.0 2023 by proceeding to register
-          </p>
-        </div>
-        <div>
-          <div>
-            <h2>eams Registration ends</h2>
-            <p>November 18, 2023</p>
-          </div>
-          <p>Interested Participants are no longer Allowed to register</p>
-        </div>
-        <div>
-          <div>
-            <h2>Announcement of the accepted teams and ideas</h2>
-            <p>November 18, 2023</p>
-          </div>
-          <p>
-            All teams whom idea has been accepted into getlinked tech hackathon 
-            1.0 2023 are formally announced
-          </p>
-        </div>
-        <div>
-          <div>
-            <h2>Getlinked Hackathon 1.0 Offically Begins</h2>
-            <p>November 18, 2023</p>
-          </div>
-          <p>
-            Accepted teams can now proceed to build their ground breaking skill
-            driven solutions
-          </p>
-        </div>
-        <div>
-          <div>
-            <h2>Demo Day</h2>
-            <p>November 18, 2023</p>
-          </div>
-          <p>
-            Teams get the opportunity to pitch their projects to judges. The
-            winner of the hackathon will also be announced on this day
-          </p>
-        </div>
-      </div>
-     </div> */}
     </section>
   );
 };

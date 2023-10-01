@@ -31,7 +31,7 @@ const Footer = () => {
             <p>27,Alara Street Yaba 100012 Lagos State</p>
           </div>
         </div>
-        <div className="text-xs py-2">
+        <div className="text-xs py-3">
           <p>All rights reserved. ©alwayspearlxx getlinked Ltd.</p>
         </div>
       </div>

@@ -7,6 +7,7 @@ import Timeline from "./components/Timeline"
 import Prices from "./components/Prices"
 import Patners from "./components/Patners"
 import Privacy from "./components/Privacy"
+import Footer from "./components/Footer"
 export default function Home() {
   return (
     <main>
@@ -19,6 +20,7 @@ export default function Home() {
       <Prices /> 
       <Patners />
       <Privacy />
+      <Footer />
     </main>
   )
 }
