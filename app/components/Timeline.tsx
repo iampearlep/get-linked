@@ -1,7 +1,7 @@
 const Timeline = () => {
   return (
     <section className="bg-[#150E28] text-white border-b border-[#3d364d]">
-      <div className="px-5 md:px-0 md:w-10/12 mx-auto py-10">
+      <div className="px-5 md:px-0 md:w-10/12 mx-auto py-14">
         <div className="py-10 md:w-2/5 mx-auto text-center">
           <h2 className="text-xl md:text-4xl font-bold py-2">Timeline</h2>
           <p className="text-md">
