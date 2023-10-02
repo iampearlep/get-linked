@@ -1,6 +1,6 @@
 import Image from "next/image";
 import getLinked from "../../public/images/getlinked.svg";
-
+import SocialMedia from "../../public/images/Social media.svg"
 const Footer = () => {
   return (
     <div className="bg-[#150E28] text-white">
@@ -23,7 +23,10 @@ const Footer = () => {
             <p>Timeline</p>
             <p>FAQs</p>
             <p>Register</p>
+            <div className="flex flex-row gap-x-3 items-center">
             <p>Follow us</p>
+            <Image src={SocialMedia} width={85} height={14} alt="" className="" />
+            </div>
           </div>
           <div className="md:w-3/12 text-xs flex flex-col gap-y-1">
             <h3 className="text-sm font-semibold text-[#d434fe] ">Contact Us</h3>
