@@ -3,7 +3,7 @@ import {ContactForm} from "../components/ContactForm"
 import SocialMedia from "../../public/images/Social media.svg"
 export default function About() {
   return (
-    <div className="bg-[#150E28] text-white h-">
+    <div className="bg-[#150E28] text-white">
       <div className="flex flex-col h-screen md:flex-row md:w-11/12 mx-auto items-center justify-center ">
         <div className="hidden w-1/2 md:flex flex-col px-16">
           <h2>Get in touch</h2>
