@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { BsTextParagraph, BsXLg } from "react-icons/bs";
 import Image from "next/image";
 import getLinked from "../../public/images/getlinked.svg";
@@ -12,7 +13,7 @@ const Navbar = () => {
     <header className="bg-[#150E28] text-white list-none border-b border-[#3d364d]">
       <nav className="flex flex-row justify-between items-center mx-auto w-10/12 pt-10 pb-5">
         <div>
-          <Image src={getLinked} width={130} height={200} alt="" />
+         <Link href="/"> <Image src={getLinked} width={130} height={200} alt="" /></Link>
         </div>
         <div className="hidden md:flex flex-row justify-between items-center text-sm w-7/12">
           <div className="flex flex-row gap-x-12">
@@ -26,12 +27,12 @@ const Navbar = () => {
               <a href="#">FAQs</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </div>
           <div className="button px-7 py-2 rounded-sm">
             <li>
-              <a href="#">Register</a>
+              <Link href="/register">Register</Link>
             </li>
           </div>
         </div>

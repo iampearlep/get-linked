@@ -17,7 +17,7 @@ const Rules = () => {
             width={600}
             height={150}
             alt=""
-            className="absolute w-full brightness-75 md:w-10/12 md:brightness-50 mt-[70px]"
+            className="absolute brightness-75 mt-[80px] -ml-6"
           />
           </div>
           <h2 className="z-10 text-2xl md:text-3xl font-bold tracking-tight leading-tight py-8">

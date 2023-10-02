@@ -10,7 +10,7 @@ const Intro = () => {
         <div className="w-10/12 md:w-1/2 flex flex-row justify-center items-center max-h-[300px] md:max-h-full">
           <Image src={Sata} width={21} height={25} alt="" className="relative -mt-40" />
           <Image src={IdeaImg} width={490} height={477} alt="" />
-          <Image src={Arrow} width={49} height={57} alt="" className="h-auto w-6 md:w-auto relative mt-[270px] md:mt-[420px]"/>
+          <Image src={Arrow} width={49} height={57} alt="" className="h-10 w-6 md:w-10 relative mt-[270px] md:mt-[420px]"/>
         </div>
         <div className="md:w-2/5">
           <div className="flex flex-row items-center text-center justify-center md:text-left md:justify-between">
@@ -18,7 +18,7 @@ const Intro = () => {
               Introduction to getlinked <br />{" "}
               <span className="text-[#d434fe]">tech Hackathon 1.0</span>
             </h2>
-            <Image src={Star} width={30} height={36} alt="" className="w-4 md:w-8" />
+            <Image src={Star} width={30} height={36} alt="" className="w-3 md:w-6" />
           </div>
           <p className="text-md md:text-lg text-center md:text-left">
             Our tech hackathon is a melting pot of visionaries, and its purpose

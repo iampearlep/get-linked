@@ -1,5 +1,6 @@
 import CountdownTimer from "./CountdownTimer";
 import Image from "next/image";
+import Link from "next/link";
 import HeroImg from "../../public/images/Image 1.svg";
 import Vector from "../../public/images/Vector 4.svg";
 import ManImg from "../../public/images/man.svg";
@@ -25,10 +26,10 @@ const Hero: React.FC = () => {
             />
           </div>
           <div className="flex flex-col md:justify-end items-end md:pr-20">
-            <h2 className="text-md md:text-4xl font-semibold ">
+            <h2 className="z-10 text-md md:text-4xl font-semibold ">
               Igniting a Revolution in HR Innovation
             </h2>
-            <Image src={Vector} width={200} height={200} alt="" className="w-4/12" />
+            <Image src={Vector} width={200} height={200} alt="" className="w-4/12 z-10" />
           </div>
         </div>
         <div className="flex flex-col gap-y-5 md:flex-row md:justify-between relative">
@@ -40,7 +41,7 @@ const Hero: React.FC = () => {
               a Big prize
             </p>
             <button className="button px-7 py-2 rounded-sm my-3 mx-auto md:mx-0">
-              Register
+            <Link href="/register">Register</Link>
             </button>
             <CountdownTimer targetDate={targetDate} />
           </div>
