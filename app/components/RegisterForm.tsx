@@ -29,7 +29,7 @@ const FormSchema = z.object({
   name: z.string().min(2, {
     message: "Team's name must be at least 2 characters.",
   }),
-  phone: z.number().max(11, {
+  phone: z.string().max(11, {
     message: "Phone number must be 11 characters.",
   }),
   email: z.string().min(2, {
