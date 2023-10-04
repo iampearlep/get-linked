@@ -32,9 +32,12 @@ const FormSchema = z.object({
   phone: z.string().max(11, {
     message: "Phone number must be 11 characters.",
   }),
-  email: z.string().min(2, {
+  email: z.string()
+  .min(2, {
     message: "Email must be at least 2 characters.",
-  }),
+  })
+  .email("Invalid Email")
+  ,
   topic: z.string().min(2, {
     message: "Email must be at least 2 characters.",
   }),
@@ -53,6 +56,12 @@ export function RegisterForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      topic: '',
+      category: '',
+      group: '',
       terms: true,
     },
   })
@@ -63,7 +72,7 @@ export function RegisterForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <FormField
           control={form.control}
           name="name"
