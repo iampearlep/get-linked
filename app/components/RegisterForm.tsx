@@ -1,10 +1,10 @@
-"use client"
+"use client";
+import { useEffect } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import * as z from "zod"
-
-import { Button } from "./ui/button"
+import { Button } from "./ui/button";
 import {
   Form,
   FormControl,
@@ -13,18 +13,18 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "./ui/form"
-import { Textarea } from "./ui/textarea"
-import { Input } from "./ui/input"
+} from "./ui/form";
+import { Textarea } from "./ui/textarea";
+import { Input } from "./ui/input";
 import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-  } from "./ui/select"
-  import { Checkbox } from "./ui/checkbox"
-
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+import { Checkbox } from "./ui/checkbox";
+import Successful from "./Successful";
 const FormSchema = z.object({
   name: z.string().min(2, {
     message: "Team's name must be at least 2 characters.",
@@ -32,39 +32,37 @@ const FormSchema = z.object({
   phone: z.string().max(11, {
     message: "Phone number must be 11 characters.",
   }),
-  email: z.string()
-  .min(2, {
-    message: "Email must be at least 2 characters.",
-  })
-  .email("Invalid Email")
-  ,
+  email: z
+    .string()
+    .min(2, {
+      message: "Email must be at least 2 characters.",
+    })
+    .email("Invalid Email"),
   topic: z.string().min(2, {
     message: "Email must be at least 2 characters.",
   }),
-    category: z
-    .string({
-      required_error: "Please select an email to display.",
-    }),
-    group: z
-    .string({
-      required_error: "Please select an email to display.",
-    }),
-    terms: z.boolean().default(false).optional(),
-})
+  category: z.string({
+    required_error: "Please select an email to display.",
+  }),
+  group: z.string({
+    required_error: "Please select an email to display.",
+  }),
+  terms: z.boolean().default(false).optional(),
+});
 
 export function RegisterForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      topic: '',
-      category: '',
-      group: '',
+      name: "",
+      email: "",
+      phone: "",
+      topic: "",
+      category: "",
+      group: "",
       terms: true,
     },
-  })
+  });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     console.log(data)
@@ -78,7 +76,7 @@ export function RegisterForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-                <FormLabel>Team's Name</FormLabel>
+              <FormLabel>Team's Name</FormLabel>
               <FormControl>
                 <Input placeholder="Enter the name of your group" {...field} />
               </FormControl>
@@ -91,41 +89,52 @@ export function RegisterForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-                <FormLabel>Phone</FormLabel>
+              <FormLabel>Phone</FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="Enter your phone number" {...field} />
+                <Input
+                  type="tel"
+                  placeholder="Enter your phone number"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-         <FormField
+        <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
-                <FormLabel>Email</FormLabel>
+              <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="Enter your email address" {...field} />
+                <Input
+                  type="email"
+                  placeholder="Enter your email address"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-         <FormField
+        <FormField
           control={form.control}
           name="topic"
           render={({ field }) => (
             <FormItem>
-                <FormLabel>Project Topic</FormLabel>
+              <FormLabel>Project Topic</FormLabel>
               <FormControl>
-                <Input placeholder="What is your group project topic?" {...field} />
+                <Input
+                  placeholder="What is your group project topic?"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-         <FormField
+        <FormField
           control={form.control}
           name="category"
           render={({ field }) => (
@@ -188,8 +197,10 @@ export function RegisterForm() {
             </FormItem>
           )}
         />
-        <Button className="button" type="submit">Register Now</Button>
+        <Button className="button" type="submit">
+          Register Now
+        </Button>
       </form>
     </Form>
-  )
+  );
 }
