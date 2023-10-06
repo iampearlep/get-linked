@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -8,7 +8,6 @@ import { Button } from "./ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -42,10 +41,10 @@ const FormSchema = z.object({
     message: "Email must be at least 2 characters.",
   }),
   category: z.string({
-    required_error: "Please select an email to display.",
+    required_error: "Please select a category to display.",
   }),
   group_size: z.string({
-    required_error: "Please select an email to display.",
+    required_error: "Please select group size.",
   }),
   privacy_poclicy_accepted: z.boolean().default(false).optional(),
 });
