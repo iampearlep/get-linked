@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-
+import axios from "axios";
 import { Button } from "./ui/button";
 import {
   Form,
@@ -26,10 +26,10 @@ import {
 import { Checkbox } from "./ui/checkbox";
 import Successful from "./Successful";
 const FormSchema = z.object({
-  name: z.string().min(2, {
+  team_name: z.string().min(2, {
     message: "Team's name must be at least 2 characters.",
   }),
-  phone: z.string().max(11, {
+  phone_number: z.string().max(11, {
     message: "Phone number must be 11 characters.",
   }),
   email: z
@@ -38,34 +38,50 @@ const FormSchema = z.object({
       message: "Email must be at least 2 characters.",
     })
     .email("Invalid Email"),
-  topic: z.string().min(2, {
+  project_topic: z.string().min(2, {
     message: "Email must be at least 2 characters.",
   }),
   category: z.string({
     required_error: "Please select an email to display.",
   }),
-  group: z.string({
+  group_size: z.string({
     required_error: "Please select an email to display.",
   }),
-  terms: z.boolean().default(false).optional(),
+  privacy_poclicy_accepted: z.boolean().default(false).optional(),
 });
 
 export function RegisterForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      name: "",
       email: "",
-      phone: "",
-      topic: "",
+      team_name: "",
+      phone_number: "",
+      group_size: "",
+      project_topic: "",
       category: "",
-      group: "",
-      terms: true,
+      privacy_poclicy_accepted: true,
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data)
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    console.log(data);
+    try {
+      const res = await axios.post('https://backend.getlinked.ai/hackathon/registration', data);
+  
+      if (res.status === 201) {
+        console.log('Data sent successfully');
+        console.log('API Response:', res.data);
+      } 
+      else if (res.status === 200) {
+        console.log('Data sent successfully');
+        console.log('API Response:', res.data);
+      } else {
+        console.error('Unexpected status code:', res.status);
+      }
+    } catch (error) {
+      console.error('API Error:', error);
+    }
   }
 
   return (
@@ -73,7 +89,7 @@ export function RegisterForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <FormField
           control={form.control}
-          name="name"
+          name="team_name"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Team's Name</FormLabel>
@@ -86,7 +102,7 @@ export function RegisterForm() {
         />
         <FormField
           control={form.control}
-          name="phone"
+          name="phone_number"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Phone</FormLabel>
@@ -120,7 +136,7 @@ export function RegisterForm() {
         />
         <FormField
           control={form.control}
-          name="topic"
+          name="project_topic"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Project Topic</FormLabel>
@@ -147,9 +163,9 @@ export function RegisterForm() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="m@example.com">m@example.com</SelectItem>
-                  <SelectItem value="m@google.com">m@google.com</SelectItem>
-                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                  <SelectItem value="1">1</SelectItem>
+                  <SelectItem value="2">2</SelectItem>
+                  <SelectItem value="3">3</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -158,7 +174,7 @@ export function RegisterForm() {
         />
         <FormField
           control={form.control}
-          name="group"
+          name="group_size"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Group Size</FormLabel>
@@ -169,9 +185,9 @@ export function RegisterForm() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="m@example.com">m@example.com</SelectItem>
-                  <SelectItem value="m@google.com">m@google.com</SelectItem>
-                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                  <SelectItem value="1">1</SelectItem>
+                  <SelectItem value="2">2</SelectItem>
+                  <SelectItem value="3">3</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -180,7 +196,7 @@ export function RegisterForm() {
         />
         <FormField
           control={form.control}
-          name="terms"
+          name="privacy_poclicy_accepted"
           render={({ field }) => (
             <FormItem className="flex flex-row items-center space-x-3 p-4">
               <FormControl>
