@@ -4,7 +4,7 @@ import { RegisterForm } from "../components/RegisterForm";
 export default function Register() {
     return(
       <div className="bg-[#150E28] text-white">
-        <div className="flex flex-row w-11/12 mx-auto items-center justify-center">
+        <div className="flex flex-col md:flex-row w-11/12 mx-auto items-center justify-center">
           <div className="w-1/2">
           <Image src={ThumbsUp} width={717} height={717} alt="" className="" />
           </div>
